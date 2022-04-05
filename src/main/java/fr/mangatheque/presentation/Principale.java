@@ -17,9 +17,10 @@ public class Principale {
 		Facade facade = new Facade(em);
 		
 		// creation de mangas ----------------------------------------------------------------------------
-		System.out.println("\n+----------------------------+");
+		/*System.out.println("\n+----------------------------+");
 		System.out.println("|     Creation de mangas     |");
 		System.out.println("+----------------------------+");
+		
 		facade.creerManga("Naruto", 6.85);
 		facade.creerManga("Berserk", 6.90);
 		facade.creerManga("Promised Neverland", 6.89);
@@ -27,7 +28,7 @@ public class Principale {
 		Collection<Manga> mangatheque = facade.getMangas();
 		for (Manga m : mangatheque) {
 			System.out.println(m);
-		}
+		}*/
 		
 		// modifier le prix de naruto --------------------------------------------------------------------
 		/*System.out.println("\n+---------------------------------+");

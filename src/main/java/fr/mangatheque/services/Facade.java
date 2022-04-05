@@ -48,4 +48,10 @@ public class Facade implements IFacade {
 		return manga;
 	}
 
+	@Override
+	public Manga modifierManga(int id, String nom, double d) {
+		Manga manga = service.modifierManga(id, nom, d);
+		return manga;
+	}
+
 }

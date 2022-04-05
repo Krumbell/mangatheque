@@ -7,4 +7,5 @@ public interface IFacade {
 	public Manga getManga (int id);
 	public Collection<Manga> getMangas ();
 	public Manga creerManga (String nom, double prix);
+	public Manga modifierManga (int id, String nom, double d);
 }

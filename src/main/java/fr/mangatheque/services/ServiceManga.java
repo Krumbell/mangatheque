@@ -46,6 +46,17 @@ public class ServiceManga {
 		return m;
 	}
 	
+	public Manga modifierManga (int id, String nom, double prix) {
+		Manga m = findManga(id);
+		if (m != null) {
+			em.getTransaction().begin();
+			m.setNom(nom);
+			m.setPrix(prix);
+			em.getTransaction().commit();
+		}
+		return m;
+	}
+	
 	@SuppressWarnings("unchecked")
 	public Collection<Manga> findAllManga () {
 		Query requete = em.createQuery("SELECT m FROM Manga m");

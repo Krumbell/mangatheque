@@ -49,11 +49,15 @@
 			<tr>
 				<th>Noms</th>
 				<th>Prix</th>
+				<th>Modifier</th>
+				<th>Supprimer</th>
 			</tr>
 			<c:forEach items="${mangas}" var="manga">
 				<tr>
 					<td>${manga.nom}</td>
 					<td>${manga.prix} euros</td>
+					<td><form action="Liste" method="get"><input type="hidden" name="idAlter" value="${manga.id}"/><input type="submit" name="alter-one" value="Modifier"/></form></td>
+					<td><form action="Liste" method="get"><input type="hidden" name="idDelete" value="${manga.id}"/><input type="submit" name="delete-one" value="supprimer"/></form></td>
 				</tr>
 			</c:forEach>
 		</table><br><br>
