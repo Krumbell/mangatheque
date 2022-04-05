@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="ISO-8859-1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+		
+		<style>
+			fieldset {
+				margin-left: 5%;
+			}
+		</style>
+		<title>Mangatheque</title>
+	</head>
+	
+	<body>
+		<div class="jumbotron text-center" style="margin-bottom:0">
+		  <h1>Ma mangatheque personnelle !</h1>
+		  <p>Pour centraliser mes collections et me souvenir des prix !</p> 
+		</div>
+		
+		<fieldset>
+			<legend>Pour visualiser les mangas de la mangathèque</legend>
+		
+			<br/><br/><form action="Liste" method="get">
+				<input type="submit" name="get-all" value="Visualiser la mangatheque">
+			</form><br/><br/>
+		</fieldset>
+		
+		<fieldset>
+			<legend>Pour ajouter un nouveau manga à la mangathèque</legend>
+			
+			<br/><br/><form action="Liste" method="get">
+				<input type="text" name="title" id="title" placeholder="Nom"><br/>
+				<input type="text" name="price" id="price" placeholder="Prix"><br/><br/>
+				<input type="submit" name="add-one" value="Ajouter à la mangatheque">
+			</form><br/><br/>
+		</fieldset>
+	</body>
+</html>

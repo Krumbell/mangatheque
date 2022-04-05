@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.2"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xmlns="http://xmlns.jcp.org/xml/ns/persistence" 
+		xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd">
+    <persistence-unit name="Mangatheque" transaction-type="RESOURCE_LOCAL">
+    	<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+    	<class>metier.Manga</class>
+    	<properties>
+      	  <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
+	      <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/mangatheque" />
+	      <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5InnoDBDialect"/>
+	      <property name="javax.persistence.jdbc.user" value="root" />
+	      <property name="javax.persistence.jdbc.password" value="root" />
+	      <property name="hibernate.show_sql" value="true" />	      
+	      <property name="javax.persistence.schema-generation.create-database-schemas" value="true"/>
+	      <!-- valeurs : none, create, drop-and-create, drop -->
+	      <property name="javax.persistence.schema-generation.database.action" value="drop-and-create"/>    
+	    </properties>
+    </persistence-unit>
+    
+    <persistence-unit name="MangathequeWeb" transaction-type="RESOURCE_LOCAL">
+    	<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+    	<properties>
+      	  <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
+	      <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/mangatheque" />
+	      <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5InnoDBDialect"/>
+	      <property name="javax.persistence.jdbc.user" value="root" />
+	      <property name="javax.persistence.jdbc.password" value="root" />
+	      <property name="hibernate.show_sql" value="true" />	      
+	      <property name="javax.persistence.schema-generation.create-database-schemas" value="true"/>
+	      <!-- valeurs : none, create, drop-and-create, drop -->
+	      <property name="javax.persistence.schema-generation.database.action" value="none"/>    
+	    </properties>
+    </persistence-unit>
+</persistence>
